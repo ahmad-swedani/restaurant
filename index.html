@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Restaurant</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+</head>
+<body>
+    <header>
+        <h1>Our Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="images/hero.jpg" alt="Restaurant Hero Image">
+    </section>
+
+    <section class="about-section">
+        <article>
+          <h3>
+              Section for the text why your restaurant is the best.
+          </h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            A quos, voluptatum illum mollitia dolores libero placeat 
+            nesciunt quasi adipisci impedit!Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. 
+            A quos, voluptatum illum mollitia dolores libero placeat 
+            nesciunt quasi adipisci impedit!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            A quos, voluptatum illum mollitia dolores libero placeat 
+            nesciunt quasi adipisci impedit!Lorem ipsum dolor sit.
+          </p>
+        </article>
+      </section>
+
+    <section class="slider">
+        <div><img src="images/slider/slider1.jpg" alt="Slider Image 1"></div>
+        <div><img src="images/slider/slider2.jpg" alt="Slider Image 2"></div>
+        <div><img src="images/slider/slider3.jpg" alt="Slider Image 3"></div>
+    </section>
+
+    <section class="info">
+        <h2>About Us</h2>
+        <p>Welcome to Our Restaurant! We offer the finest cuisine with the freshest ingredients. Our chefs are dedicated to bringing you a delightful dining experience. Whether you're here for a quick meal or a special occasion, we strive to make every visit memorable.</p>
+    </section>
+
+    <section class="location">
+        <h2>Find Us</h2>
+        <div id="map"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Our Restaurant</p>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: false,
+            });
+        });
+    </script>
+    <script>
+        function initMap() 
+        {
+            var location = {lat: 31.9454, lng: 35.9284};
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 13,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzGOPOUKtlxC8maK4G9sxSGcEpZNSJyVc&callback=initMap">
+    </script>
+</body>
+</html>

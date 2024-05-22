@@ -1,0 +1,13 @@
+@import url('common.css');
+
+/* Add any specific styles for the thanks page here */
+.thanks {
+    margin: 20px auto;
+    width: 80%;
+}
+.thanks img {
+    width: 100%;
+    /* make  image high 500 px without stretching */
+    height: 515px;
+    object-fit: cover;
+}

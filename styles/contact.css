@@ -1,0 +1,39 @@
+@import url('common.css');
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    margin-top: 5px;
+    padding: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.slider {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.slider img {
+    width: 100%;
+    /* make  image high 500 px without stretching */
+    height: 250px;
+    object-fit: cover;
+}
